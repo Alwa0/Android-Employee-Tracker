@@ -14,8 +14,9 @@ public class Main {
         String password = "qwerty"; // fetched from json for example
         String mail = "some_hr@gmail.ru"; // fetched from json for example
         String reg_type = "HR"; // fetched from json for example
-        UserRegistrator registrator = null;
 
+        // Example of polymorphism via factory pattern
+        UserRegistrator registrator = null;
         switch (reg_type) {
             case "HR": registrator = new HRRegistrator(); break;
             case "EMPLOYEE": registrator = new EmployeeRegistrator(); break;
@@ -25,5 +26,6 @@ public class Main {
 
         User new_user = registrator.register(username, password, mail);
         // some user implementation independent logic next ...
+        // also pattern example usage located in add_employee method of Admin class
     }
 }
