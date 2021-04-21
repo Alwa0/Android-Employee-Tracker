@@ -13,8 +13,6 @@ public class HRRegistrator extends UserRegistrator{
         HR hr = new HR(1, pass, username, email);
         hr.save();
 
-        // actual db interaction
-
         Permission check_gps = new Permission(hr, "employee.gps.check");
         Permission check_profile = new Permission(hr, "employee.profile.check.other");
         Permission some_other_hr_perm = new Permission(hr, "employee.profile.check");
