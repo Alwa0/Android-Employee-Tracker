@@ -1,2 +1,2 @@
-public class AdminRegistrator {
+public class AdminRegistrator extends UserRegistrator{
 }
