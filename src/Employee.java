@@ -25,9 +25,9 @@ public class Employee extends User{
         this.salary = salary;
     }
 
-    private GPS_location location;
-    private BufferedImage image;
-    private long salary;
+    public GPS_location location;
+    public BufferedImage image;
+    public long salary;
 
     public Employee(GPS_location location, BufferedImage image, long salary, long id, String password, String username, String email) {
         super(id, password, username, email);
