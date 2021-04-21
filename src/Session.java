@@ -32,4 +32,8 @@ public class Session {
     public void setTimestamp(String timestamp) {
         this.timestamp = timestamp;
     }
+
+    public void destroy(long id){
+
+    }
 }
