@@ -1,4 +1,6 @@
-public class Session {
+package model;
+
+public class Session implements ORM_Model {
     private long id;
     private String token;
     private String timestamp;
@@ -35,5 +37,22 @@ public class Session {
 
     public void destroy(long id){
 
+    }
+
+    @Override
+    public void save() {
+        // some smart sql
+    }
+
+    @Override
+    public ORM_Model update(String... fields) {
+        // some smart sql
+        return this;
+    }
+
+    @Override
+    public ORM_Model delete(String... fields) {
+        // some smart sql
+        return this;
     }
 }

@@ -1,6 +1,8 @@
+package model;
+
 import java.util.Date;
 
-public class GPS_location {
+public class GPS_location implements ORM_Model {
     private double latitude;
     private double longitude;
     private Date timestamp;
@@ -33,5 +35,22 @@ public class GPS_location {
         this.latitude = latitude;
         this.longitude = longitude;
         this.timestamp = timestamp;
+    }
+
+    @Override
+    public void save() {
+        // some smart sql
+    }
+
+    @Override
+    public ORM_Model update(String... fields) {
+        // some smart sql
+        return null;
+    }
+
+    @Override
+    public ORM_Model delete(String... fields) {
+        // some smart sql
+        return null;
     }
 }

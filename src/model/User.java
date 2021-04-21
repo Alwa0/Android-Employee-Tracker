@@ -1,4 +1,6 @@
-public class User {
+package model;
+
+public class User implements ORM_Model{
     private long id;
     private String password;
     private String username;
@@ -36,10 +38,24 @@ public class User {
         return email;
     }
 
+    @Override
+    public void save() {
+        // some smart sql
+    }
 
+    @Override
+    public ORM_Model update(String... fields) {
+        // some smart sql
+        return this;
+    }
 
-    public User(long id, String password, String username, String email) {
-        this.id = id;
+    @Override
+    public ORM_Model delete(String... fields) {
+        // some smart sql
+        return this;
+    }
+
+    public User(String password, String username, String email) {
         this.password = password;
         this.username = username;
         this.email = email;

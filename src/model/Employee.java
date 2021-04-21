@@ -1,3 +1,5 @@
+package model;
+
 import java.awt.image.BufferedImage;
 
 public class Employee extends User{
@@ -29,8 +31,8 @@ public class Employee extends User{
     public BufferedImage image;
     public long salary;
 
-    public Employee(GPS_location location, BufferedImage image, long salary, long id, String password, String username, String email) {
-        super(id, password, username, email);
+    public Employee(GPS_location location, BufferedImage image, long salary, String password, String username, String email) {
+        super(password, username, email);
         this.location = location;
         this.image = image;
         this.salary = salary;
