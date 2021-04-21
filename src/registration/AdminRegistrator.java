@@ -20,6 +20,7 @@ public class AdminRegistrator extends UserRegistrator{
         all_perms_on_gps.save();
         all_perms_on_profile.save();
 
+        System.out.println("ADMIN registered!");
         return admin;
     }
 

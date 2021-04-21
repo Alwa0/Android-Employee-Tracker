@@ -19,6 +19,7 @@ public class EmployeeRegistrator extends UserRegistrator{
         permission_create_gps.save();
         permission_profile_check.save();
 
+        System.out.println("EMPLOYEE registered!");
         return emp;
     }
 

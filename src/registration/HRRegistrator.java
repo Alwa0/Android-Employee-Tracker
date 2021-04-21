@@ -22,6 +22,8 @@ public class HRRegistrator extends UserRegistrator{
         check_gps.save();
         check_profile.save();
         some_other_hr_perm.save();
+
+        System.out.println("HR registered!");
         return hr;
     }
 }
