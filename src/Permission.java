@@ -32,4 +32,8 @@ public class Permission {
     public void setValue(boolean value) {
         this.value = value;
     }
+
+    public boolean grant(String permission){
+        return true;
+    }
 }
