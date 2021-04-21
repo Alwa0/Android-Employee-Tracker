@@ -1,2 +1,2 @@
-public class EmployeeRegistrator {
+public class EmployeeRegistrator extends UserRegistrator{
 }
