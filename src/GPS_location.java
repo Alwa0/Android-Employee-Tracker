@@ -1,7 +1,37 @@
 import java.util.Date;
 
 public class GPS_location {
-    double latitude;
-    double longitude;
-    Date timestamp;
+    private double latitude;
+    private double longitude;
+    private Date timestamp;
+
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
+    }
+
+    public Date getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(Date timestamp) {
+        this.timestamp = timestamp;
+    }
+
+    public GPS_location(double latitude, double longitude, Date timestamp) {
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.timestamp = timestamp;
+    }
 }
