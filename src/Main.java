@@ -12,6 +12,8 @@ public class Main {
      * This is example of web server logic
      * */
     public static void main(String[] args) {
+        System.out.println("== SIMPLE USAGE EXAMPLE ==\n");
+
         // fetch user from database with id 123 and send push notification
         TeamComponent tc = (new User()).fetch("123");
         tc.pushNotify("MESSAGE FROM THE BOSS", "YOU FIRED!");
@@ -25,6 +27,7 @@ public class Main {
         // advertising algorithm which generate set of teams/users
 
         // SOME TEAM WITH MANY MEMBERS AND TEAMS INSIDE
+        System.out.println("\n== UNIFIED USAGE EXAMPLE ==");
         TeamComponent team1Tree = (new Team()).fetch("1");
         team1Tree.addComponent((new User()).fetch("1001"));
         team1Tree.addComponent((new User()).fetch("1002"));
