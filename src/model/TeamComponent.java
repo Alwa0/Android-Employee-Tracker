@@ -1,8 +1,6 @@
 package model;
 
-import java.util.Date;
-
-public class TeamComponent {
+public abstract class TeamComponent {
     public TeamComponent parent;
 
     public TeamComponent() {
