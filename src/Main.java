@@ -23,10 +23,18 @@ public class Main {
 
         // some use case of unified usage. Suppose we have some smart
         // advertising algorithm which generate set of teams/users
+
+        // SOME TEAM WITH MANY MEMBERS AND TEAMS INSIDE
+        TeamComponent team1_tree = (new Team()).fetch("1");
+        team1_tree.addComponent((new User()).fetch("1001"));
+        team1_tree.addComponent((new User()).fetch("1002"));
+        team1_tree.addComponent((new User()).fetch("1003"));
+        team1_tree.addComponent((new Team()).fetch("2"));
+
         List<TeamComponent> advertisement = Arrays.asList(
                 (new User()).fetch("123"),
                 (new User()).fetch("133"),
-                (new Team()).fetch("1"),
+                team1_tree,
                 (new User()).fetch("145"),
                 (new User()).fetch("167"),
                 (new Team()).fetch("2"),

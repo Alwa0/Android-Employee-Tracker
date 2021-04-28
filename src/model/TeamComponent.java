@@ -25,7 +25,7 @@ public class TeamComponent {
     }
 
     public TeamComponent get(){
-        return null;
+        return this;
     }
 
     public void addComponent(TeamComponent component){

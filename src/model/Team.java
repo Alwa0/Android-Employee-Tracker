@@ -33,9 +33,20 @@ public class Team extends TeamComponent implements ORM_Model {
         return components;
     }
 
+    public void addComponent(TeamComponent component){
+        this.components.add(component);
+    }
+
+    @Override
+    public TeamComponent remove(TeamComponent component) {
+        this.components.remove(component);
+        return this;
+    }
+
     public void pushNotify(String notificationHeader, String notificationBody){
         // some method which calls external service to perform push notification
-        System.out.printf("SENT NOTIFICATION TO TEAM WITH ID: %d\n", this.id);
+        System.out.printf("SENDING NOTIFICATION TO TEAM WITH ID: %d, %d members inside\n", this.id, components.size());
+        this.components.forEach(teamComponent -> {teamComponent.pushNotify(notificationHeader, notificationBody);});
     }
 
     @Override
