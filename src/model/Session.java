@@ -4,11 +4,13 @@ public class Session implements ORM_Model {
     private long id;
     private String token;
     private String timestamp;
+    private User user;
 
-    public Session(long id, String token, String timestamp) {
+    public Session(long id, String token, String timestamp, User user) {
         this.id = id;
         this.token = token;
         this.timestamp = timestamp;
+        this.user = user;
     }
 
     public long getId() {
