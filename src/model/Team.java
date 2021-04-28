@@ -2,8 +2,16 @@ package model;
 
 public class Team extends TeamComponent implements ORM_Model {
     public TeamComponent[] components;
-    public Team(String password, String username, String specialization){
 
+    public Team(TeamComponent[] components) {
+    }
+
+    public void setComponents(TeamComponent[] components) {
+        this.components = components;
+    }
+
+    public TeamComponent[] getComponents() {
+        return components;
     }
 
     @Override
