@@ -32,7 +32,15 @@ public class Main {
         team1Tree.addComponent((new User()).fetch("1001"));
         team1Tree.addComponent((new User()).fetch("1002"));
         team1Tree.addComponent((new User()).fetch("1003"));
-        team1Tree.addComponent((new Team()).fetch("2"));
+
+        TeamComponent innerTeam = (new Team()).fetch("2");
+        innerTeam.addComponent((new User()).fetch("2001"));
+        innerTeam.addComponent((new User()).fetch("2002"));
+        team1Tree.addComponent(innerTeam);
+
+        TeamComponent team3Tree = (new Team()).fetch("3");
+        team3Tree.addComponent((new User()).fetch("3001"));
+        team3Tree.addComponent((new User()).fetch("3002"));
 
         List<TeamComponent> advertisement = Arrays.asList(
                 (new User()).fetch("123"),
@@ -40,10 +48,9 @@ public class Main {
                 team1Tree,
                 (new User()).fetch("145"),
                 (new User()).fetch("167"),
-                (new Team()).fetch("2"),
+                team3Tree,
                 (new User()).fetch("190"),
-                (new Team()).fetch("3"),
-                (new Team()).fetch("4")
+                (new Team()).fetch("4") // Supports empty team as well
         );
         advertisement.forEach(teamComponent -> teamComponent.pushNotify("ADVERTISEMENT", "Hello dear clients and teams, we want keep in touch..."));
 
