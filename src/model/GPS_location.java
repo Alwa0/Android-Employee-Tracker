@@ -38,6 +38,11 @@ public class GPS_location implements ORM_Model {
     }
 
     @Override
+    public ORM_Model fetch(String id) {
+        return new User("qwerty", "username", "email@gmail.com");
+    }
+
+    @Override
     public void save() {
         // some smart sql
     }

@@ -3,6 +3,11 @@ package model;
 public interface ORM_Model {
 
     /**
+     * Method which performs actual SQL SELECT LIMIT 1
+     *
+     * */
+    ORM_Model fetch(String id);
+    /**
      * Method which performs actual SQL INSERT
      *
      * */

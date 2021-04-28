@@ -47,6 +47,12 @@ public class Permission implements ORM_Model {
     }
 
     @Override
+    public ORM_Model fetch(String id) {
+        // sql join
+        return new Permission(new User("placeholder", "placeholder", "placeholder"), "some.permission");
+    }
+
+    @Override
     public void save() {
         // some smart sql
     }

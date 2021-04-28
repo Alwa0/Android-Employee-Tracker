@@ -6,8 +6,7 @@ public class Session implements ORM_Model {
     private String timestamp;
     private User user;
 
-    public Session(long id, String token, String timestamp, User user) {
-        this.id = id;
+    public Session(String token, String timestamp, User user) {
         this.token = token;
         this.timestamp = timestamp;
         this.user = user;
@@ -48,6 +47,12 @@ public class Session implements ORM_Model {
 
     public void destroy(long id){
 
+    }
+
+    @Override
+    public ORM_Model fetch(String id) {
+        // some sql join
+        return new Session("someToken", "22-04-2021", new User("placeholder", "placeholder", "placeholder"));
     }
 
     @Override

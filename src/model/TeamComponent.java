@@ -20,12 +20,8 @@ public class TeamComponent {
         this.parent = parent;
     }
 
-    public void assignTask(String task, Date deadline){
-
-    }
-
     public void pushNotify(String notificationHeader, String notificationBody){
-
+        // some method which calls external service to perform push notification
     }
 
     public TeamComponent get(){

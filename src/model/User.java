@@ -1,10 +1,17 @@
 package model;
 
+import java.util.Date;
+
 public class User extends TeamComponent implements ORM_Model{
     private long id;
     private String password;
     private String username;
     private String email;
+
+    public void pushNotify(String notificationHeader, String notificationBody){
+        // some method which calls external service to perform push notification
+        System.out.printf("SENT NOTIFICATION TO USER WITH ID: %d\n", this.id);
+    }
 
     public void setId(long id) {
         this.id = id;
@@ -39,6 +46,16 @@ public class User extends TeamComponent implements ORM_Model{
     }
 
     @Override
+    public User fetch(String id) {
+        // some smart sql
+        this.setId(Integer.parseInt(id));
+        this.setEmail("emailfromdb@gmail.com");
+        this.setUsername("some_username");
+        this.setPassword("hashed_password_from_db");
+        return this;
+    }
+
+    @Override
     public void save() {
         // some smart sql
     }
@@ -53,6 +70,12 @@ public class User extends TeamComponent implements ORM_Model{
     public ORM_Model delete(String... fields) {
         // some smart sql
         return this;
+    }
+
+    public User() {
+        this.password = null;
+        this.username = null;
+        this.email = null;
     }
 
     public User(String password, String username, String email) {
