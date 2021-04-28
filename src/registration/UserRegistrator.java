@@ -13,8 +13,6 @@ public abstract class UserRegistrator {
 
     /** OUR ACTUAL FACTORY METHOD */
     public User register(String username, String email, String pass){
-        User user = new User( username, email, pass);
-        user.save();
-        return user;
+        return null;
     }
 }
