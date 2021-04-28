@@ -1,6 +1,6 @@
 package model;
 
-public class User implements ORM_Model {
+public class User extends TeamComponent implements ORM_Model{
     private long id;
     private String password;
     private String username;
