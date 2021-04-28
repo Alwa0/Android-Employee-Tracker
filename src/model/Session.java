@@ -37,6 +37,15 @@ public class Session implements ORM_Model {
         this.timestamp = timestamp;
     }
 
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+
     public void destroy(long id){
 
     }
