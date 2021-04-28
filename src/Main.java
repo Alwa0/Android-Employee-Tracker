@@ -25,16 +25,16 @@ public class Main {
         // advertising algorithm which generate set of teams/users
 
         // SOME TEAM WITH MANY MEMBERS AND TEAMS INSIDE
-        TeamComponent team1_tree = (new Team()).fetch("1");
-        team1_tree.addComponent((new User()).fetch("1001"));
-        team1_tree.addComponent((new User()).fetch("1002"));
-        team1_tree.addComponent((new User()).fetch("1003"));
-        team1_tree.addComponent((new Team()).fetch("2"));
+        TeamComponent team1Tree = (new Team()).fetch("1");
+        team1Tree.addComponent((new User()).fetch("1001"));
+        team1Tree.addComponent((new User()).fetch("1002"));
+        team1Tree.addComponent((new User()).fetch("1003"));
+        team1Tree.addComponent((new Team()).fetch("2"));
 
         List<TeamComponent> advertisement = Arrays.asList(
                 (new User()).fetch("123"),
                 (new User()).fetch("133"),
-                team1_tree,
+                team1Tree,
                 (new User()).fetch("145"),
                 (new User()).fetch("167"),
                 (new Team()).fetch("2"),
