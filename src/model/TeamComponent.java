@@ -2,7 +2,7 @@ package model;
 
 import java.util.Date;
 
-public class TeamComponent{
+public class TeamComponent {
     public TeamComponent parent;
 
     public void assignTask(String task, Date deadline){
@@ -14,7 +14,7 @@ public class TeamComponent{
     }
 
     public TeamComponent get(){
-
+        return null;
     }
 
     public void addComponent(TeamComponent component){
@@ -22,6 +22,6 @@ public class TeamComponent{
     }
 
     public TeamComponent remove(TeamComponent component){
-
+        return null;
     }
 }
