@@ -31,6 +31,13 @@ public class Employee extends User{
     public BufferedImage image;
     public long salary;
 
+    public Employee() {
+        super();
+        this.location = null;
+        this.image = null;
+        this.salary = 0;
+    }
+
     public Employee(GPS_location location, BufferedImage image, long salary, String password, String username, String email, String specialization) {
         super(password, username, email);
         this.location = location;

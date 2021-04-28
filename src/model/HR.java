@@ -6,6 +6,9 @@ public class HR extends User{
     public HR(long id, String password, String username, String email) {
         super(password, username, email);
     }
+    public HR() {
+        super();
+    }
     public GPS_location viewLocation(long id, Date date){
         return null;
     }

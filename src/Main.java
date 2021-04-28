@@ -1,6 +1,4 @@
-import model.Team;
-import model.TeamComponent;
-import model.User;
+import model.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -15,7 +13,7 @@ public class Main {
         System.out.println("== SIMPLE USAGE EXAMPLE ==\n");
 
         // fetch user from database with id 123 and send push notification
-        TeamComponent tc = (new User()).fetch("123");
+        TeamComponent tc = (new Employee()).fetch("123");
         tc.pushNotify("MESSAGE FROM THE BOSS", "YOU FIRED!");
 
         // fetch team from database with id 123 and send message to ALL members
@@ -29,28 +27,28 @@ public class Main {
         // SOME TEAM WITH MANY MEMBERS AND TEAMS INSIDE
         System.out.println("\n== UNIFIED USAGE EXAMPLE ==");
         TeamComponent team1Tree = (new Team()).fetch("1");
-        team1Tree.addComponent((new User()).fetch("1001"));
-        team1Tree.addComponent((new User()).fetch("1002"));
-        team1Tree.addComponent((new User()).fetch("1003"));
+        team1Tree.addComponent((new Employee()).fetch("1001"));
+        team1Tree.addComponent((new Employee()).fetch("1002"));
+        team1Tree.addComponent((new Employee()).fetch("1003"));
 
         TeamComponent innerTeam = (new Team()).fetch("2");
-        innerTeam.addComponent((new User()).fetch("2001"));
-        innerTeam.addComponent((new User()).fetch("2002"));
+        innerTeam.addComponent((new Employee()).fetch("2001"));
+        innerTeam.addComponent((new Employee()).fetch("2002"));
         team1Tree.addComponent(innerTeam);
 
         TeamComponent team3Tree = (new Team()).fetch("3");
-        team3Tree.addComponent((new User()).fetch("3001"));
-        team3Tree.addComponent((new User()).fetch("3002"));
+        team3Tree.addComponent((new Employee()).fetch("3001"));
+        team3Tree.addComponent((new Employee()).fetch("3002"));
 
         List<TeamComponent> advertisement = Arrays.asList(
-                (new User()).fetch("123"),
-                (new User()).fetch("133"),
+                (new HR()).fetch("123"),
+                (new HR()).fetch("133"),
                 team1Tree,
-                (new User()).fetch("145"),
-                (new User()).fetch("167"),
+                (new Admin()).fetch("145"),
+                (new Admin()).fetch("167"),
                 team3Tree,
-                (new User()).fetch("190"),
-                (new Team()).fetch("4") // Supports empty team as well
+                (new Employee()).fetch("190"),
+                (new Employee()).fetch("4") // Supports empty team as well
         );
         advertisement.forEach(teamComponent -> teamComponent.pushNotify("ADVERTISEMENT", "Hello dear clients and teams, we want keep in touch..."));
 

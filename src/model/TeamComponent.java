@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Date;
+
 public abstract class TeamComponent {
     public TeamComponent parent;
 
@@ -16,6 +18,10 @@ public abstract class TeamComponent {
 
     public TeamComponent(TeamComponent parent) {
         this.parent = parent;
+    }
+
+    public void assignTask(String task, Date deadline) {
+        // some method which also intended to be used
     }
 
     public void pushNotify(String notificationHeader, String notificationBody){

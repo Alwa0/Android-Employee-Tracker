@@ -13,6 +13,11 @@ public class User extends TeamComponent implements ORM_Model{
         System.out.printf("SENT NOTIFICATION TO USER WITH ID: %d\n", this.id);
     }
 
+    public void assignTask(String task, Date deadline) {
+        // some method which also intended to be used
+        System.out.printf("TASK ASSIGNED TO USER WITH ID: %d\n", this.id);
+    }
+
     public void setId(long id) {
         this.id = id;
     }

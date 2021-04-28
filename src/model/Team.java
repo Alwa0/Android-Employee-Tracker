@@ -2,6 +2,7 @@ package model;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
 import java.util.List;
 
 public class Team extends TeamComponent implements ORM_Model {
@@ -47,6 +48,12 @@ public class Team extends TeamComponent implements ORM_Model {
         // some method which calls external service to perform push notification
         System.out.printf("SENDING NOTIFICATION TO TEAM WITH ID: %d, %d members inside\n", this.id, components.size());
         this.components.forEach(teamComponent -> {teamComponent.pushNotify(notificationHeader, notificationBody);});
+    }
+
+    public void assignTask(String task, Date deadline) {
+        // some method which also intended to be used
+        System.out.printf("ASSIGNED TASK TO TEAM WITH ID: %d, %d members inside\n", this.id, components.size());
+        this.components.forEach(teamComponent -> {teamComponent.assignTask(task, deadline);});
     }
 
     @Override

@@ -9,6 +9,9 @@ public class Admin extends User {
     public Admin(String password, String username, String email) {
         super(password, username, email);
     }
+    public Admin() {
+        super();
+    }
     public GPS_location ViewLocation(long id, Date date){
         return null;
     }
