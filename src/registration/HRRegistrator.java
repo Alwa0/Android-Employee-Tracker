@@ -13,13 +13,13 @@ public class HRRegistrator extends UserRegistrator{
         HR hr = new HR(1, pass, username, email);
         hr.save();
 
-        Permission check_gps = new Permission(hr, "employee.gps.check");
-        Permission check_profile = new Permission(hr, "employee.profile.check.other");
-        Permission some_other_hr_perm = new Permission(hr, "employee.profile.check");
+        Permission checkGPS = new Permission(hr, "employee.gps.check");
+        Permission checkProfile = new Permission(hr, "employee.profile.check.other");
+        Permission someOtherHRPerm = new Permission(hr, "employee.profile.check");
 
-        check_gps.save();
-        check_profile.save();
-        some_other_hr_perm.save();
+        checkGPS.save();
+        checkProfile.save();
+        someOtherHRPerm.save();
 
         System.out.println("HR registered!");
         return hr;

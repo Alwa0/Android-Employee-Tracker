@@ -11,13 +11,13 @@ public class EmployeeRegistrator extends UserRegistrator{
      * */
     @Override
     public User register(String username, String email, String pass) {
-        Employee emp = new Employee(null, null, -1, pass, username, email);
+        Employee emp = new Employee(null, null, -1, pass, username, email, "PM");
         emp.save();
 
-        Permission permission_create_gps = new Permission(emp, "employee.gps.post.own");
-        Permission permission_profile_check = new Permission(emp, "employee.profile.check.own");
-        permission_create_gps.save();
-        permission_profile_check.save();
+        Permission permissionCreateGPS = new Permission(emp, "employee.gps.post.own");
+        Permission permissionProfileCheck = new Permission(emp, "employee.profile.check.own");
+        permissionCreateGPS.save();
+        permissionProfileCheck.save();
 
         System.out.println("EMPLOYEE registered!");
         return emp;

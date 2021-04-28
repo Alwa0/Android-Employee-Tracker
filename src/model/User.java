@@ -1,6 +1,6 @@
 package model;
 
-public class User implements ORM_Model{
+public class User implements ORM_Model {
     private long id;
     private String password;
     private String username;
@@ -60,8 +60,6 @@ public class User implements ORM_Model{
         this.username = username;
         this.email = email;
     }
-
-
 
     public boolean logout(){
         return true;

@@ -2,18 +2,18 @@ package model;
 
 public class Permission implements ORM_Model {
     private long id;
-    private long user_id;
+    private long userId;
     private String permission;
     private boolean value;
 
     public Permission(User user, String permission, boolean value) {
-        this.user_id = user.getId();
+        this.userId = user.getId();
         this.permission = permission;
         this.value = value;
     }
 
     public Permission(User user, String permission) {
-        this.user_id = user.getId();
+        this.userId = user.getId();
         this.permission = permission;
         this.value = true;
     }

@@ -15,10 +15,10 @@ public class AdminRegistrator extends UserRegistrator{
         Admin admin = new Admin(pass, username, email);
         admin.save();
 
-        Permission all_perms_on_gps = new Permission(admin, "employee.gps.crud.all");
-        Permission all_perms_on_profile = new Permission(admin, "employee.profile.crud.all");
-        all_perms_on_gps.save();
-        all_perms_on_profile.save();
+        Permission allPermsOnGps = new Permission(admin, "employee.gps.crud.all");
+        Permission allPermsOnProfile = new Permission(admin, "employee.profile.crud.all");
+        allPermsOnGps.save();
+        allPermsOnProfile.save();
 
         System.out.println("ADMIN registered!");
         return admin;

@@ -6,10 +6,10 @@ public class HR extends User{
     public HR(long id, String password, String username, String email) {
         super(password, username, email);
     }
-    public GPS_location view_location(long id, Date date){
+    public GPS_location viewLocation(long id, Date date){
         return null;
     }
-    public long check_salary(long id, Date date){
+    public long checkSalary(long id, Date date){
         return 0;
     }
 }
