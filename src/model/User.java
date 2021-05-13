@@ -2,7 +2,7 @@ package model;
 
 import java.util.Date;
 
-public class User extends TeamComponent implements ORM_Model{
+public class User extends TeamComponent implements ORMmodel {
     private long id;
     private String password;
     private String username;
@@ -66,13 +66,13 @@ public class User extends TeamComponent implements ORM_Model{
     }
 
     @Override
-    public ORM_Model update(String... fields) {
+    public ORMmodel update(String... fields) {
         // some smart sql
         return this;
     }
 
     @Override
-    public ORM_Model delete(String... fields) {
+    public ORMmodel delete(String... fields) {
         // some smart sql
         return this;
     }

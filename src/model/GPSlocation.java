@@ -2,7 +2,7 @@ package model;
 
 import java.util.Date;
 
-public class GPS_location implements ORM_Model {
+public class GPSlocation implements ORMmodel {
     private double latitude;
     private double longitude;
     private Date timestamp;
@@ -31,14 +31,14 @@ public class GPS_location implements ORM_Model {
         this.timestamp = timestamp;
     }
 
-    public GPS_location(double latitude, double longitude, Date timestamp) {
+    public GPSlocation(double latitude, double longitude, Date timestamp) {
         this.latitude = latitude;
         this.longitude = longitude;
         this.timestamp = timestamp;
     }
 
     @Override
-    public ORM_Model fetch(String id) {
+    public ORMmodel fetch(String id) {
         return new User("qwerty", "username", "email@gmail.com");
     }
 
@@ -48,13 +48,13 @@ public class GPS_location implements ORM_Model {
     }
 
     @Override
-    public ORM_Model update(String... fields) {
+    public ORMmodel update(String... fields) {
         // some smart sql
         return null;
     }
 
     @Override
-    public ORM_Model delete(String... fields) {
+    public ORMmodel delete(String... fields) {
         // some smart sql
         return null;
     }

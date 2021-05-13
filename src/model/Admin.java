@@ -12,7 +12,7 @@ public class Admin extends User {
     public Admin() {
         super();
     }
-    public GPS_location ViewLocation(long id, Date date){
+    public GPSlocation ViewLocation(long id, Date date){
         return null;
     }
     public long checkSalary(long id, Date date){

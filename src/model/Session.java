@@ -1,6 +1,6 @@
 package model;
 
-public class Session implements ORM_Model {
+public class Session implements ORMmodel {
     private long id;
     private String token;
     private String timestamp;
@@ -50,7 +50,7 @@ public class Session implements ORM_Model {
     }
 
     @Override
-    public ORM_Model fetch(String id) {
+    public ORMmodel fetch(String id) {
         // some sql join
         return new Session("someToken", "22-04-2021", new User("placeholder", "placeholder", "placeholder"));
     }
@@ -61,13 +61,13 @@ public class Session implements ORM_Model {
     }
 
     @Override
-    public ORM_Model update(String... fields) {
+    public ORMmodel update(String... fields) {
         // some smart sql
         return this;
     }
 
     @Override
-    public ORM_Model delete(String... fields) {
+    public ORMmodel delete(String... fields) {
         // some smart sql
         return this;
     }

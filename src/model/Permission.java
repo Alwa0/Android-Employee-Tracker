@@ -1,6 +1,6 @@
 package model;
 
-public class Permission implements ORM_Model {
+public class Permission implements ORMmodel {
     private long id;
     private long userId;
     private String permission;
@@ -47,7 +47,7 @@ public class Permission implements ORM_Model {
     }
 
     @Override
-    public ORM_Model fetch(String id) {
+    public ORMmodel fetch(String id) {
         // sql join
         return new Permission(new User("placeholder", "placeholder", "placeholder"), "some.permission");
     }
@@ -58,13 +58,13 @@ public class Permission implements ORM_Model {
     }
 
     @Override
-    public ORM_Model update(String... fields) {
+    public ORMmodel update(String... fields) {
         // some smart sql
         return this;
     }
 
     @Override
-    public ORM_Model delete(String... fields) {
+    public ORMmodel delete(String... fields) {
         // some smart sql
         return this;
     }

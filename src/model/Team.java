@@ -1,11 +1,10 @@
 package model;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 
-public class Team extends TeamComponent implements ORM_Model {
+public class Team extends TeamComponent implements ORMmodel {
 
     private long id;
     public List<TeamComponent> components;
@@ -69,13 +68,13 @@ public class Team extends TeamComponent implements ORM_Model {
     }
 
     @Override
-    public ORM_Model update(String... fields) {
+    public ORMmodel update(String... fields) {
         // some smart sql
         return this;
     }
 
     @Override
-    public ORM_Model delete(String... fields) {
+    public ORMmodel delete(String... fields) {
         // some smart sql
         return this;
     }
