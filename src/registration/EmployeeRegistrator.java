@@ -11,7 +11,7 @@ public class EmployeeRegistrator extends UserRegistrator{
      * */
     @Override
     public User register(String username, String email, String pass) {
-        Employee emp = new Employee(null, null, -1, pass, username, email, "PM");
+        Employee emp = new Employee(null, null, -1, pass, username, email);
         emp.save();
 
         Permission permissionCreateGPS = new Permission(emp, "employee.gps.post.own");

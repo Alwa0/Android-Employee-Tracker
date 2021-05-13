@@ -37,6 +37,13 @@ public class GPS_location implements ORM_Model {
         this.timestamp = timestamp;
     }
 
+    public String getCity() {
+        // just example, nothing about real GPS
+        if (this.longitude > 100) return "Moscow";
+        if (this.longitude > 300) return "Kaliningrad";
+        return null; // null if suburb
+    }
+
     @Override
     public ORM_Model fetch(String id) {
         return new User("qwerty", "username", "email@gmail.com");

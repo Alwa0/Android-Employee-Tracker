@@ -10,7 +10,8 @@ public class User extends TeamComponent implements ORM_Model{
 
     public void pushNotify(String notificationHeader, String notificationBody){
         // some method which calls external service to perform push notification
-        System.out.printf("SENT NOTIFICATION TO USER WITH ID: %d\n", this.id);
+        System.out.printf("SENT NOTIFICATION TO USER WITH ID: %d\n",  this.id);
+        System.out.printf("  - HEADER: %s \n  - CONTENT: %s\n", notificationHeader, notificationBody);
     }
 
     public void assignTask(String task, Date deadline) {

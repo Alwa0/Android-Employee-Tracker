@@ -1,11 +1,12 @@
 package model;
 
+import events.Subscriber;
 import registration.EmployeeRegistrator;
 import registration.UserRegistrator;
 
 import java.util.Date;
 
-public class Admin extends User {
+public class Admin extends User implements Subscriber {
     public Admin(String password, String username, String email) {
         super(password, username, email);
     }
@@ -24,6 +25,11 @@ public class Admin extends User {
         // some log about admin action maybe
     }
     public void changePassword(long id, String newPassword){
+
+    }
+
+    @Override
+    public void onUpdate(Employee old_state, Employee new_state) {
 
     }
 }
