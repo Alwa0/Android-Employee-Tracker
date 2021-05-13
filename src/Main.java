@@ -1,9 +1,6 @@
 import model.*;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Date;
-import java.util.List;
 
 public class Main {
 
@@ -19,7 +16,7 @@ public class Main {
         HR some_hr_with_id_10 = (HR) (new HR()).fetch(id_from_request);
         Employee employee = (Employee) (new Employee()).fetch("123");
 
-        employee.setLocation(new GPS_location(70, 70, new Date()));
+        employee.setLocation(new GPSLocation(70, 70, new Date()));
         employee.getLocationPublisher().subscribe(some_hr_with_id_10);
 
 
@@ -28,7 +25,7 @@ public class Main {
         id_from_request = "20";
         HR some_hr_with_id_20 = (HR) (new HR()).fetch(id_from_request);
 
-        employee.setLocation(new GPS_location(70, 70, new Date()));
+        employee.setLocation(new GPSLocation(70, 70, new Date()));
         employee.getLocationPublisher().subscribe(some_hr_with_id_20);
 
 
@@ -37,14 +34,14 @@ public class Main {
         id_from_request = "30";
         HR some_hr_with_id_30 = (HR) (new HR()).fetch(id_from_request);
 
-        employee.setLocation(new GPS_location(70, 70, new Date()));
+        employee.setLocation(new GPSLocation(70, 70, new Date()));
         employee.getLocationPublisher().subscribe(some_hr_with_id_30);
 
         // Same Employee updating its location via HTTP POST request
         // like that:
         // id_from_request = "123";
         // Employee employee = (new Employee).fetch(id_from_request)
-        GPS_location location = new GPS_location(120, 120, new Date()); // Serializer from JSON for example
+        GPSLocation location = new GPSLocation(120, 120, new Date()); // Serializer from JSON for example
         employee.setLocation(location);
         // all 3 subscribed HRs receives Push notifications
 

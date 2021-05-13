@@ -11,7 +11,7 @@ public class HR extends User implements Subscriber {
     public HR() {
         super();
     }
-    public GPS_location viewLocation(long id, Date date){
+    public GPSLocation viewLocation(long id, Date date){
         return null;
     }
     public long checkSalary(long id, Date date){

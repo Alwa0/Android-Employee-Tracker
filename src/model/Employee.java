@@ -8,15 +8,15 @@ import java.util.Date;
 public class Employee extends User{
 
     private LocationChangePublisher publisher;
-    public GPS_location location;
+    public GPSLocation location;
     public BufferedImage image;
     public long salary;
 
-    public GPS_location getLocation() {
+    public GPSLocation getLocation() {
         return location;
     }
 
-    public void setLocation(GPS_location new_location) {
+    public void setLocation(GPSLocation new_location) {
         new_location.setTimestamp(new Date());
 
         // explicit cloning
@@ -54,7 +54,7 @@ public class Employee extends User{
         this.salary = 0;
     }
 
-    public Employee(GPS_location location, BufferedImage image, long salary, String password, String username, String email) {
+    public Employee(GPSLocation location, BufferedImage image, long salary, String password, String username, String email) {
         super(password, username, email);
         this.location = location;
         this.image = image;

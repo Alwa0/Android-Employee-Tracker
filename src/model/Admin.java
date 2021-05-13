@@ -13,7 +13,7 @@ public class Admin extends User implements Subscriber {
     public Admin() {
         super();
     }
-    public GPS_location ViewLocation(long id, Date date){
+    public GPSLocation ViewLocation(long id, Date date){
         return null;
     }
     public long checkSalary(long id, Date date){
