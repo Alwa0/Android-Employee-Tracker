@@ -25,7 +25,7 @@ public class LocationChangePublisher {
         subscribers.add(e);
     }
 
-    public void notifySubscribers(Employee old_state, Employee new_state) {
-        subscribers.forEach(subscriber -> subscriber.onUpdate(old_state, new_state));
+    public void notifySubscribers(Employee oldState, Employee newState) {
+        subscribers.forEach(subscriber -> subscriber.onUpdate(oldState, newState));
     }
 }
