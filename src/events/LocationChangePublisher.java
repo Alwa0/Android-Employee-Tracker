@@ -25,6 +25,15 @@ public class LocationChangePublisher {
         subscribers.add(e);
     }
 
+    public void unsubscribe(Subscriber e) {
+        if (!(e instanceof User)) return;
+        User user = (User) e;
+
+        // Remove sub from DB like so:
+        // (new Subscription(employee, user)).fetch(double_primary_key).delete();
+        subscribers.remove(e);
+    }
+
     public void notifySubscribers(Employee oldState, Employee newState) {
         subscribers.forEach(subscriber -> subscriber.onUpdate(oldState, newState));
     }
